@@ -15,8 +15,9 @@ import javax.persistence.*;
 public class AddressTypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "addr_type_id")
     private long id;
 
-    @Column(name = "type")
+    @Column(name = "addr_type_name")
     private String type;
 }

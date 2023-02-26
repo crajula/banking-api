@@ -15,8 +15,10 @@ import javax.persistence.*;
 public class AccountTypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    @OneToOne(mappedBy = "accountType")
     private long id;
 
-    @Column(name = "type")
+    @Column(name = "acc_type_name")
     private String name;
 }

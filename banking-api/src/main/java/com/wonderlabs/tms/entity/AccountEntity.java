@@ -4,6 +4,8 @@ package com.wonderlabs.tms.entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
@@ -21,8 +23,15 @@ public class AccountEntity {
     private String accountNumber;
 
     @Column(name = "acc_type")
-    private String accountType;
+    @OneToOne
+    @JoinColumn(name = "acc_type_id", referencedColumnName = "id")
+    private AccountTypeEntity accountType;
 
     @Column(name = "balance")
     private double balance;
+
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private UserEntity userEntity;
 }

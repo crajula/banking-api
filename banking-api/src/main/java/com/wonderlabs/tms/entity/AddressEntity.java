@@ -17,6 +17,7 @@ import javax.persistence.*;
 public class AddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "address_id")
     private long id;
 
     @Column(name = "house_no")

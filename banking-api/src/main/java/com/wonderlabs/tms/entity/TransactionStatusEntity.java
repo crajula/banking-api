@@ -8,16 +8,16 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "transaction_status")
 @AllArgsConstructor
 @Builder
 @Data
-public class TransactionTypeEntity {
+public class TransactionStatusEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "txn_type_id")
-    private long transactionTypeId;
+    @Column(name = "txn_status_id")
+    private long txnStatusId;
 
-    @Column(name = "txn_type_description")
-    private String transactionTypeName;
+    @Column(name = "txn_status_description")
+    private String txnStatusDescription;
 }

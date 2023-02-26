@@ -17,7 +17,7 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private long id;
+    private long userId;
 
     @Column(name = "name")
     private String name;
@@ -31,10 +31,10 @@ public class UserEntity {
     @Column(name = "email")
     private String email;
 
-    @OneToMany()
+    @OneToMany(mappedBy="userEntity")
     private List<AddressEntity> addressEntity;
 
-    @OneToMany()
-    private List<AccountEntity> accountEntities;
+    @OneToMany(mappedBy="userEntity")
+    private List<AccountEntity> accountEntity;
 
 }
