@@ -8,21 +8,15 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "account")
+@Table(name = "account_type")
 @AllArgsConstructor
 @Builder
 @Data
-public class AccountEntity {
+public class AccountTypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "acc_number")
-    private String accountNumber;
-
-    @Column(name = "acc_type")
-    private String accountType;
-
-    @Column(name = "balance")
-    private double balance;
+    @Column(name = "type")
+    private String name;
 }

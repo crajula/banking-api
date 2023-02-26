@@ -14,15 +14,9 @@ import javax.persistence.*;
 @Data
 public class AddressTypeEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tutorial_generator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "title")
-    private String name;
-
-    @Column(name = "description")
-    private String surname;
-
-    @Column(name = "published")
-    private boolean mobileNumber;
+    @Column(name = "type")
+    private String type;
 }
