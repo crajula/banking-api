@@ -84,8 +84,8 @@
 				<version>3.5.1</version>
 				<configuration>
 					<annotationProcessorPaths>
-						<source>1.8</source> <!-- depending on your project -->
-						<target>1.8</target> <!-- depending on your project -->
+						<source>19</source> <!-- depending on your project -->
+						<target>19</target> <!-- depending on your project -->
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok-mapstruct-binding</artifactId>
@@ -98,6 +98,22 @@
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
+				<executions>
+					<execution>
+						<id>default-descriptor</id>
+						<goals>
+							<goal>descriptor</goal>
+						</goals>
+						<phase>process-classes</phase>
+					</execution>
+					<execution>
+						<id>help-descriptor</id>
+						<goals>
+							<goal>helpmojo</goal>
+						</goals>
+						<phase>process-classes</phase>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
