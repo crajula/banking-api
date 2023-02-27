@@ -84,8 +84,8 @@
 				<version>3.5.1</version>
 				<configuration>
 					<annotationProcessorPaths>
-						<source>19</source> <!-- depending on your project -->
-						<target>1119</target> <!-- depending on your project -->
+						<source>1.8</source> <!-- depending on your project -->
+						<target>1.8</target> <!-- depending on your project -->
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok-mapstruct-binding</artifactId>
